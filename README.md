@@ -9,5 +9,5 @@
 
 - Hacer doc y presentacion
 - Landing
-- Apartado 1 WISHLIST
-- Apartado 2 OBJETOS
+- Apartado 1 CHARACTERS
+- Apartado 2 INVENTORY

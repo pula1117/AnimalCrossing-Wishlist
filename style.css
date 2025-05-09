@@ -66,20 +66,21 @@ img {
   margin: 0 auto;
 }
 
-/* Botones de navegación */
-.nav-box {
-  background-color: #FBFEB2;
+.nav-btn {
+  background-color: #FBFEB2 !important; 
+  color: #E89D93 !important;
+  border: none !important;
+  font-family: nintendoP;
+  font-weight: bold;
   padding: 10px 20px;
   border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
   text-decoration: none;
-  font-weight: bold;
-  color: black;
-  font-family: nintendoP;
-  transition: background-color 0.3s ease;
 }
 
-.nav-box:hover {
-  background-color: #FBFEB2;
+.nav-btn:hover {
+  background-color: #d7da98 !important; 
+  color: #d69188 !important;  
 }
 
 /* Imagen de inicio */
@@ -98,3 +99,5 @@ img {
   width: auto;
   height: auto;
 }
+
+

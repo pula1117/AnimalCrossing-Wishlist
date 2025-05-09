@@ -1,7 +1,7 @@
-body {
+bbody {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; 
 }
 
 /* Header */
@@ -20,25 +20,64 @@ body {
     height: 50px;
 }
 
+.imagen-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
 .navbar-brand .imagen-logo{
     width: 50px;
     height: 50px;
     padding: 10%;
 }
 
-/* lo he quitado pq no pone los nombres bien*/
-
-/* Contenedor de los boxes
-.header .boxes {
-    display: flex;
-    gap: 15px;
-} */
-
-/* Box */
-/* .header .box {
-    background-color: white;
+/* Navbar general */
+.navbar-custom {
+    background-color: #4CAF50;
     padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
+    position: relative;
+}
+
+/* Contenedor con layout horizontal */
+.nav-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Logo completamente a la izquierda */
+.logo {
+    margin-right: auto;
+}
+
+/* Imagen del logo */
+.imagen-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Botones centrados en el navbar */
+.nav-buttons {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilo botones personalizados */
+.btn-custom {
+    background-color: #FFC107;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
     font-weight: bold;
-} */
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #e0a800;
+}

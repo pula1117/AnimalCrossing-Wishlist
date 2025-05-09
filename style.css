@@ -1,23 +1,52 @@
+<<<<<<< HEAD
 bbody {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif; 
+=======
+img{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: FinkHeavy, nintendoP;
+>>>>>>> main
+}
+
+@font-face {
+    font-family: "FinkHeavy";
+    src: url(media/fonts/FinkHeavy.ttf);
+}
+
+@font-face {
+    font-family: "nintendoP";
+    src: url(media/fonts/nintendoP_Humming-E_002pr.otf);
+}
+
+
 /* Header */
-.navbar {
-    background-color: #4CAF50; /* Verde */
+.container-fluid {
+    background-color: #74e0aa; /* Verde */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;    
     padding: 20px;
     gap: 20px;
+    font-family: nintendoP;
+
+    position: sticky;
+    top: 0px;
 }
 
 /* Logo a la izquierda */
 .navbar-brand {
     width: 50px;
     height: 50px;
+    
 }
 
 .imagen-logo {
@@ -30,6 +59,14 @@ bbody {
     width: 50px;
     height: 50px;
     padding: 10%;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.navbar-brand .imagen-logo:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 /* Navbar general */
@@ -75,9 +112,28 @@ bbody {
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
+<<<<<<< HEAD
     transition: background-color 0.3s ease;
 }
 
 .btn-custom:hover {
     background-color: #e0a800;
+=======
+} */
+
+.imageninicio {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  overflow:hidden;
+  padding-top: 2%;
+}
+
+.imageninicio img {
+  max-width: 70vw;   /* Máximo 90% del ancho de la pantalla */
+  max-height: 70vh;  /* Máximo 90% de la altura de la pantalla */
+  height: auto;
+  width: auto;
+>>>>>>> main
 }

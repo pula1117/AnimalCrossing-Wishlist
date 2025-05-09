@@ -100,4 +100,24 @@ img {
   height: auto;
 }
 
+main {
+  position: relative;
+  background: url('media/img/fondo main.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
 
+/* Esto hay q mirar porq no scrollea */
+
+main::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40vh; /* ajusta esto según cuánto quieres que difumine */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #FCF6D6 100%);
+  pointer-events: none;
+  z-index: 1;
+}

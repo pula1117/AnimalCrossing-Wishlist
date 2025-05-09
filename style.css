@@ -1,90 +1,100 @@
-img{
-    width: 100%;
-    height: auto;
-    vertical-align: middle;
+/* Tipografías personalizadas */
+@font-face {
+  font-family: "FinkHeavy";
+  src: url(media/fonts/FinkHeavy.ttf);
 }
 
+@font-face {
+  font-family: "nintendoP";
+  src: url(media/fonts/nintendoP_Humming-E_002pr.otf);
+}
+
+/* Reglas globales */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: FinkHeavy, nintendoP;
+  margin: 0;
+  padding: 0;
+  font-family: FinkHeavy, nintendoP;
 }
 
-@font-face {
-    font-family: "FinkHeavy";
-    src: url(media/fonts/FinkHeavy.ttf);
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
 }
 
-@font-face {
-    font-family: "nintendoP";
-    src: url(media/fonts/nintendoP_Humming-E_002pr.otf);
+/* HEADER - Navbar */
+.container-fluid,
+.navbar-custom {
+  background-color: #74e0aa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  font-family: nintendoP;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-
-/* Header */
-.container-fluid {
-    background-color: #74e0aa; /* Verde */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;    
-    padding: 20px;
-    gap: 20px;
-    font-family: nintendoP;
-
-    position: sticky;
-    top: 0px;
-}
-
-/* Logo a la izquierda */
+/* Logo */
 .navbar-brand {
-    width: 50px;
-    height: 50px;
-    
+  width: 50px;
+  height: 50px;
+  margin-right: auto;
 }
 
-.navbar-brand .imagen-logo{
-    width: 50px;
-    height: 50px;
-    padding: 10%;
-    display: flex;
-    align-items: center;
-    transition: 0.3s;
+.navbar-brand .imagen-logo {
+  width: 50px;
+  height: 50px;
+  padding: 10%;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s;
 }
 
-.navbar-brand .imagen-logo:hover{
-    transform: scale(1.1);
-    transition: 0.3s;
+.navbar-brand .imagen-logo:hover {
+  transform: scale(1.1);
 }
 
-/* lo he quitado pq no pone los nombres bien*/
+/* Navegación centrada */
+.nav-links-centered {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
 
-/* Contenedor de los boxes
-.header .boxes {
-    display: flex;
-    gap: 15px;
-} */
+/* Botones de navegación */
+.nav-box {
+  background-color: #FBFEB2;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-family: nintendoP;
+  transition: background-color 0.3s ease;
+}
 
-/* Box */
-/* .header .box {
-    background-color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
-} */
+.nav-box:hover {
+  background-color: #FBFEB2;
+}
 
+/* Imagen de inicio */
 .imageninicio {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 100vh; /* Ocupa toda la altura de la ventana */
-  overflow:hidden;
+  height: 100vh;
+  overflow: hidden;
   padding-top: 2%;
 }
 
 .imageninicio img {
-  max-width: 70vw;   /* Máximo 90% del ancho de la pantalla */
-  max-height: 70vh;  /* Máximo 90% de la altura de la pantalla */
-  height: auto;
+  max-width: 70vw;
+  max-height: 70vh;
   width: auto;
+  height: auto;
 }

@@ -1,6 +1,6 @@
-$(document).ready(function(){
-    console.log("ready!");
-    
+$(document).ready(function () {
+    let sortedCharacters = [];
+
     fetch("https://api.nookipedia.com/villagers", {
         method: "GET",
         headers: {
@@ -11,10 +11,26 @@ $(document).ready(function(){
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        return response.json(); // Convertir la respuesta a JSON
+        return response.json();
     })
     .then(data => {
-        console.log("Datos recibidos:", data); // Mostrar los datos en consola
+        // Si quieres ordenar por nombre, descomenta esto:
+        // data.sort((a, b) => a.name.localeCompare(b.name));
+
+        data.forEach(villager => {
+            let villagerHTML = `
+                <div class="card" style="width: 18rem; margin: 1rem;">
+                    <img src="${villager.image_url}" class="card-img-top" alt="${villager.name}" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">${villager.name}</h5>
+                        <p class="card-text">${villager.species} | ${villager.personality}</p>
+                        <a href="https://nookipedia.com/wiki/${encodeURIComponent(villager.name)}" target="_blank" class="btn btn-primary">Ver en Nookipedia</a>
+                    </div>
+                </div>
+            `;
+
+            $("#villagerContainer").append(villagerHTML);
+        });
     })
     .catch(error => {
         console.error("Error en la llamada a la API:", error);

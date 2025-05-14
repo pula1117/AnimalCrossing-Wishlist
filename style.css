@@ -121,3 +121,15 @@ main::after {
   pointer-events: none;
   z-index: 1;
 }
+
+.details {
+  display: flex;
+  justify-content: center;  /* centra horizontalmente */
+  align-items: center;      /* centra verticalmente */
+  height: 10vh;            /* ocupa toda la pantalla */
+}
+
+.detalles {
+  text-align: center;
+  font-family: nintendoP;
+}

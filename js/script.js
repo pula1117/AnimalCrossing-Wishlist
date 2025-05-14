@@ -1,9 +1,12 @@
+
 $(document).ready(function () {
+    console.log("Script cargado");
+
     const speciesContainers = {
-        Cat: "#villagerCatContainer",
-        Eagle: "#villagerEagleContainer",
-        Elephant: "#villagerElephantContainer",
-        Duck: "#villagerDuckContainer"
+        cat: "#villagerCatContainer",
+        eagle: "#villagerEagleContainer",
+        elephant: "#villagerElephantContainer",
+        octopus: "#villagerOctopusContainer"
     };
 
     function hideAll() {
@@ -12,13 +15,9 @@ $(document).ready(function () {
         }
     }
 
-    // Al principio, ocultar todos los contenedores
     hideAll();
-
-    // Mostrar el spinner mientras se cargan los datos
     $("#loading").show();
 
-    // Llamada a la API
     fetch("https://api.nookipedia.com/villagers", {
         method: "GET",
         headers: {
@@ -30,52 +29,59 @@ $(document).ready(function () {
         return response.json();
     })
     .then(data => {
-        // Ocultar el spinner cuando los datos llegan
         $("#loading").hide();
 
-        data.forEach(villager => {
-            if (speciesContainers[villager.species]) {
-                const card = `
-                    <div class="card m-2" style="width: 18rem;">
-                        <img src="${villager.image_url}" class="card-img-top" alt="${villager.name}" style="height: 400px, weight:250px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">${villager.name}</h5>
-                            <p class="card-text">${villager.species} | ${villager.personality}</p>
-                            <a href="https://nookipedia.com/wiki/${encodeURIComponent(villager.name)}" target="_blank" class="btn btn-primary">Ver en Nookipedia</a>
-                        </div>
+    data.forEach(villager => {
+    const speciesKey = villager.species.toLowerCase();
+
+    if (speciesContainers[speciesKey]) {
+        console.log(villager); // ✅ Muestra toda la info del personaje
+
+        const card = `
+            <div class="col-sm-6 col-md-4 col-lg-3 d-flex align-items-stretch mb-4">
+                <div class="card w-100">
+                    <img src="${villager.image_url}" class="card-img-top" alt="${villager.name}" style="height: 300px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title">${villager.name}</h5>
+                        <p class="card-text">${villager.species}</p>
+                        <a href="https://nookipedia.com/wiki/${encodeURIComponent(villager.name)}" target="_blank" class="btn btn-primary mt-auto">Nookipedia</a>
                     </div>
-                `;
-                $(speciesContainers[villager.species]).append(card);
+                </div>
+            </div>
+        `;
+        $(`#${speciesKey}Row`).append(card);
+    }
+});
 
 
-                 // Mostrar todas las propiedades del personaje
-                console.log(villager);
-            }
-        });
 
-        // Activar botones después de que se carguen los datos
-        $("#btnCats").click(function () {
-            hideAll();
-            $(speciesContainers["Cat"]).show();
-        });
+    // Botones que muestran solo una especie
+    $("#btnCats").click(function () {
+        hideAll();
+        $(speciesContainers["cat"]).show();
+    });
 
-        $("#btnEagles").click(function () {
-            hideAll();
-            $(speciesContainers["Eagle"]).show();
-        });
+    $("#btnEagles").click(function () {
+        hideAll();
+        $(speciesContainers["eagle"]).show();
+    });
 
-        $("#btnElephants").click(function () {
-            hideAll();
-            $(speciesContainers["Elephant"]).show();
-        });
+    $("#btnElephants").click(function () {
+        hideAll();
+        $(speciesContainers["elephant"]).show();
+    });
 
-        $("#btnDucks").click(function () {
-            hideAll();
-            $(speciesContainers["Duck"]).show();
-        });
+    $("#btnOctopus").click(function () {
+        hideAll();
+        $(speciesContainers["octopus"]).show();
+    });
+
+
+    $(speciesContainers["cat"]).show();
+
+
     })
     .catch(error => {
-        
         $("#loading").hide();
         console.error("Error al obtener datos:", error);
     });

@@ -88,9 +88,10 @@ img {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 100vh;
+  height: 75vh;
   overflow: hidden;
   padding-top: 2%;
+  padding-bottom: 1%;
 }
 
 .imageninicio img {

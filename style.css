@@ -121,3 +121,12 @@ main::after {
   pointer-events: none;
   z-index: 1;
 }
+
+
+
+/* characters page */
+
+
+.greenBG{
+  background-color: #74e0aa;
+}

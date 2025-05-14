@@ -121,3 +121,9 @@ main::after {
   pointer-events: none;
   z-index: 1;
 }
+
+.wishlist-title {
+  font-family: nintendoP;
+  color: #74E0AA;
+  margin-top: 0; /* elimina margen superior */
+}

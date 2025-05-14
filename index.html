@@ -22,23 +22,48 @@
 <body>
 
   <!-- Sticky Header -->
-  <header class="bg-success sticky-top">
-    <div class="container-fluid d-flex align-items-center justify-content-between py-3">
+  <!-- <header class="bg-success sticky-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between py-3"> -->
       <!-- Logo a la izquierda -->
-        <a class="navbar-brand" href="index.html">
+        <!-- <a class="navbar-brand" href="index.html">
           <img class="imagen-logo" src="media/img/animal_crossing_leaf_logo.png" alt="Logo" />
-        </a>
+        </a> -->
 
       <!-- Botones centrados -->
-      <div class="d-flex justify-content-center flex-grow-1 gap-3">
+      <!-- <div class="d-flex justify-content-center flex-grow-1 gap-3">
        <a href="characters.html" class="btn nav-btn">CHARACTERS</a>
         <a href="details.html" class="btn nav-btn">DETAILS</a>
-      </div>
+      </div> -->
 
       <!-- Espacio vacío para equilibrio visual -->
+      <!-- <div style="width: 50px;"></div>
+    </div>
+  </header> -->
+
+  <header class="bg-success sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img class="imagen-logo" src="media/img/animal_crossing_leaf_logo.png" alt="Logo" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item">
+            <a href="characters.html" class="btn nav-btn nav-link">CHARACTERS</a>
+          </li>
+          <li class="nav-item">
+            <a href="details.html" class="btn nav-btn nav-link">DETAILS</a>
+          </li>
+        </ul>
+      </div>
       <div style="width: 50px;"></div>
     </div>
-  </header>
+  </nav>
+</header>
 
   <main class="pt-4">
     <div class="imageninicio">
@@ -46,11 +71,6 @@
     </div>
 
     <h1 class="text-center my-4">Wishlist</h1>
-
-
-    
-
-
 
     <div id="carouselExampleCaptions" class="carousel slide">
       <div class="carousel-inner">
@@ -103,3 +123,4 @@
 
 </body>
 </html>
+

@@ -88,7 +88,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 65vh;
+  height: 75vh;
   overflow: hidden;
   padding-top: 2%;
   padding-bottom: 1%;
@@ -127,4 +127,11 @@ main::after {
   font-family: nintendoP;
   color: #74E0AA;
   margin-top: 0; /* elimina margen superior */
+}
+
+.info {
+  font-family: nintendoP;
+  color: #d69188;
+  background-color: #74E0AA;
+
 }

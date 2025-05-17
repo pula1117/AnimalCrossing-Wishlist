@@ -132,6 +132,86 @@ main::after {
 .info {
   font-family: nintendoP;
   color: #d69188;
-  background-color: #74E0AA;
 
+  padding: 5px;
+
+    
+    margin-bottom: 100px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    gap: 2px;
+
+}
+
+.info1{
+  font-family: nintendoP;
+  color: #d69188;
+  padding: 5px;
+
+    
+    margin-bottom: 100px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    gap: 2px;
+}
+
+.videoinfo{
+  height: 80%;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-bg{
+  background-color: #74e0aa ;
+}
+
+
+/* Contenedor interior con fondo y bordes redondeados */
+.about-container {
+  background-color: #d8c2a7;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.about-title {
+  color: #fdf6c9;
+  font-weight: bold;
+  font-family: nintendoP;
+}
+
+/* Imagen de personaje */
+.character-img {
+  border-radius: 0.75rem;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* Nombre del personaje */
+.character-name {
+  color: #fdf6c9;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: nintendoP;
+}
+
+/* Descripción inferior */
+.about-description {
+  font-weight: 500;
+  color: rgba(152, 133, 110, 1);
+  max-width: 800px;
+  margin: 0 auto;
 }

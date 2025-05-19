@@ -127,8 +127,8 @@ main::after {
 /* characters page */
 
 
-.greenBG{
-  background-color: #74e0aa;
+.imgBg{
+  background: url('media\img\fondo personajes y details.png') no-repeat center center;
 }
 
 
@@ -157,3 +157,62 @@ main::after {
   font-weight: 500;
 }
 
+.translucent-green-bg {
+    background-color: rgba(144, 238, 144, 0.6);
+    border-radius: 80px;
+    padding: 40px;
+    max-width: 90%;
+    margin: 0 auto; /* centra horizontalmente */
+}
+
+  
+  
+  
+.card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  max-width: 250px; /* nuevo: ancho máximo menor */
+  margin: 0 auto; /* centrar horizontalmente dentro de su columna */
+}
+
+.card-body {
+  padding: 0.5rem;
+  text-align: center;
+  font-family: nintendoP;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0 0 1rem 1rem;
+  background-color: white;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-link-wrapper:hover .card {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+} 
+
+.card-img-top {
+  height: 350px !important; /* más baja que 480px */
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+
+.row.justify-content-center {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+@media (min-width: 992px) {
+  .col-lg-2-4 {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+}

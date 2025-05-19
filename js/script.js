@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     console.log("Script cargado");
 
@@ -31,56 +30,68 @@ $(document).ready(function () {
     .then(data => {
         $("#loading").hide();
 
-    data.forEach(villager => {
-    const speciesKey = villager.species.toLowerCase();
+        data.forEach(villager => {
+            const speciesKey = villager.species.toLowerCase();
 
-    if (speciesContainers[speciesKey]) {
-        console.log(villager); // ✅ Muestra toda la info del personaje
+            if (speciesContainers[speciesKey]) {
+                console.log(villager); // Muestra toda la info del personaje
 
-        const card = `
-            <div class="col-sm-6 col-md-4 col-lg-3 d-flex align-items-stretch mb-4">
-                <div class="card w-100">
-                    <img src="${villager.image_url}" class="card-img-top" alt="${villager.name}" style="height: 300px; object-fit: cover;">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                        <h5 class="card-title">${villager.name}</h5>
-                        <p class="card-text">${villager.species}</p>
-                        <a href="https://nookipedia.com/wiki/${encodeURIComponent(villager.name)}" target="_blank" class="btn btn-primary mt-auto">Nookipedia</a>
+                const card = `
+                    <div class="col-6 col-md-3 col-lg-3 mb-4 px-2">
+
+                        <a href="https://nookipedia.com/wiki/${encodeURIComponent(villager.name)}" target="_blank" class="card-link-wrapper text-decoration-none w-100">
+                            <div class="card shadow-sm border-0" style="border-radius: 1rem; overflow: hidden;">
+                                <img src="${villager.image_url}" class="card-img-top" alt="${villager.name}" style="height: 480px; object-fit: cover;">
+                                <div class="card-body text-dark p-2 d-flex justify-content-center align-items-center" style="height: auto; background: white;">
+                                    <h5 class="card-title m-0">${villager.name}</h5>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </div>
-            </div>
-        `;
-        $(`#${speciesKey}Row`).append(card);
-    }
-});
+                `;
 
 
 
-    // Botones que muestran solo una especie
-    $("#btnCats").click(function () {
-        hideAll();
+                $(`#${speciesKey}Row`).append(card);
+            }
+        });
+
+        // Función para marcar botón activo
+        function setActiveTab(buttonId) {
+            $(".btn-tab").removeClass("active-tab");
+            $(`#${buttonId}`).addClass("active-tab");
+        }
+
+        // Botones con efecto de pestaña
+        $("#btnCats").click(function () {
+            hideAll();
+            $(speciesContainers["cat"]).show();
+            setActiveTab("btnCats");
+        });
+
+        $("#btnEagles").click(function () {
+            hideAll();
+            $(speciesContainers["eagle"]).show();
+            setActiveTab("btnEagles");
+        });
+
+        $("#btnElephants").click(function () {
+            hideAll();
+            $(speciesContainers["elephant"]).show();
+            setActiveTab("btnElephants");
+        });
+
+        $("#btnOctopus").click(function () {
+            hideAll();
+            $(speciesContainers["octopus"]).show();
+            setActiveTab("btnOctopus");
+        });
+
+        // Mostrar inicialmente los gatos y marcar el botón
         $(speciesContainers["cat"]).show();
-    });
-
-    $("#btnEagles").click(function () {
-        hideAll();
-        $(speciesContainers["eagle"]).show();
-    });
-
-    $("#btnElephants").click(function () {
-        hideAll();
-        $(speciesContainers["elephant"]).show();
-    });
-
-    $("#btnOctopus").click(function () {
-        hideAll();
-        $(speciesContainers["octopus"]).show();
-    });
-
-
-    $(speciesContainers["cat"]).show();
-
-
+        setActiveTab("btnCats");
     })
+
     .catch(error => {
         $("#loading").hide();
         console.error("Error al obtener datos:", error);

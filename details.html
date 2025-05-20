@@ -41,23 +41,39 @@
 <div class="details">
   <h1 class="detalles">DETAILS</h1>
 </div>
+
+
+  <div class="container my-5 custom-bg">
+    <div class="row align-items-center character-card">
+
+      <!-- 3D Model -->
+      <div class="col-md-6 text-center">
+        <model-viewer alt="Apollo" src="media/models/animal_crossing_pocket_camp_apollo.glb" ar environment-image="media\img\animal-crossing-grass-animal-crossing-wallpaper-preview.jpg" poster="media/img/Apolo_29.webp" shadow-intensity="1" camera-controls touch-action="pan-y" style="width: 50%; height: 60vh; max-height: 800px; display: block;"></model-viewer>
+      </div>
+
+      <!-- Text Info from API -->
+      <div class="col-md-6 character-info">
+        <h3>Name: <span id="name"></span></h3>
+        <p>Species: <span id="species"></span></p>
+        <p>Birthday: <span id="birthday"></span></p>
+        <p>Quote: <span id="quote"></span></p>
+        <p>Personality: <span id="personality"></span></p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Custom JS -->
+  <script src="js/details.js"></script>
     
 
-    <model-viewer alt="Apollo" src="media/models/animal_crossing_pocket_camp_apollo.glb" ar environment-image="media\img\animal-crossing-grass-animal-crossing-wallpaper-preview.jpg" poster="media/img/Apolo_29.webp" shadow-intensity="1" camera-controls touch-action="pan-y" style="width: 50%; height: 60vh; max-height: 800px; display: block;"></model-viewer>
-
-
-
-
-
-
-
-
+  
 
 
     <!-- JQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <!-- JS -->
-    <script src="js/script.js"></script>
+    <script src="js/details.js"></script>
 </body>
 </html>

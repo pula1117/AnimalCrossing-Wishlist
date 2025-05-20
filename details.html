@@ -14,6 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div class="imgBg">
     <header class="bg-success sticky-top">
   <nav class="navbar navbar-expand-lg navbar-dark bg-success">
     <div class="container-fluid">
@@ -30,7 +31,16 @@
             <a href="characters.html" class="btn nav-btn nav-link">CHARACTERS</a>
           </li>
           <li class="nav-item">
-            <a href="details.html" class="btn nav-btn nav-link">DETAILS</a>
+            <a href="details.html" class="btn nav-btn nav-link">APOLLO</a>
+          </li>
+          <li class="nav-item">
+            <a href="details2.html" class="btn nav-btn nav-link">BOB</a>
+          </li>
+          <li class="nav-item">
+            <a href="details3.html" class="btn nav-btn nav-link">MARSHAL</a>
+          </li>
+          <li class="nav-item">
+            <a href="details4.html" class="btn nav-btn nav-link">JULIA</a>
           </li>
         </ul>
       </div>
@@ -38,23 +48,38 @@
     </div>
   </nav>
 </header>
-    <h1>DETAILS</h1>
-
-    <model-viewer alt="Apollo" src="media/models/animal_crossing_pocket_camp_apollo.glb" ar environment-image="media\img\animal-crossing-grass-animal-crossing-wallpaper-preview.jpg" poster="media/img/Apolo_29.webp" shadow-intensity="1" camera-controls touch-action="pan-y" style="width: 50%; height: 60vh; max-height: 800px; display: block;"></model-viewer>
-
-
+<div class="details">
+  <h1 class="detalles">DETAILS</h1>
+</div>
 
 
+  <div class="container my-5 custom-bg">
+    <div class="row align-items-center character-card">
 
+      <!-- 3D Model -->
+      <div class="col-md-6 text-center">
+        <model-viewer alt="Apollo" src="media/models/animal_crossing_pocket_camp_apollo.glb" ar environment-image="media\img\animal-crossing-grass-animal-crossing-wallpaper-preview.jpg" poster="media/img/Apolo_29.webp" shadow-intensity="1" camera-controls touch-action="pan-y" style="width: 50%; height: 60vh; max-height: 800px; display: block;"></model-viewer>
+      </div>
 
+      <!-- Text Info from API -->
+      <div class="col-md-6 character-info">
+        <h3>Name: <span id="name"></span></h3>
+        <p>Species: <span id="species"></span></p>
+        <p>Birthday: <span id="birthday"></span></p>
+        <p>Quote: <span id="quote"></span></p>
+        <p>Personality: <span id="personality"></span></p>
+      </div>
 
+    </div>
+  </div>
 
+  </div>
 
-
+    
     <!-- JQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <!-- JS -->
-    <script src="js/script.js"></script>
+    <script src="js/details.js"></script>
 </body>
 </html>

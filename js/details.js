@@ -3,7 +3,7 @@ const villagerName = 'Apollo';
 
 async function fetchVillager() {
   try {
-    const response = await fetch(`https://api.nookipedia.com/villagers/${encodeURIComponent(Apollo)}`, {
+    const response = await fetch(`https://api.nookipedia.com/villagers/${encodeURIComponent(villagerName)}`, {
       headers: {
         'X-API-KEY': apiKey,
         'Accept': 'application/json'
@@ -16,15 +16,16 @@ async function fetchVillager() {
 
     const data = await response.json();
 
-    document.getElementById('name').textContent = data.name || 'N/A';
-    document.getElementById('species').textContent = data.species || 'N/A';
-    document.getElementById('birthday').textContent = data['birthday-string'] || 'N/A';
-    document.getElementById('quote').textContent = data.quote || 'N/A';
-    document.getElementById('personality').textContent = data.personality || 'N/A';
+    document.getElementById('villager.name').textContent = data.name || 'N/A';
+    document.getElementById('villager.species').textContent = data.species || 'N/A';
+    document.getElementById('villager.birthday').textContent = data['birthday-string'] || 'N/A';
+    document.getElementById('villager.quote').textContent = data.quote || 'N/A';
+    document.getElementById('villager.personality').textContent = data.personality || 'N/A';
 
   } catch (error) {
     console.error('Error fetching villager data:', error);
 
+    // Datos de respaldo si falla la API
     document.getElementById('name').textContent = 'Apollo';
     document.getElementById('species').textContent = 'Eagle';
     document.getElementById('birthday').textContent = '04/07';
@@ -33,5 +34,4 @@ async function fetchVillager() {
   }
 }
 
-// Ejecutar la función al cargar el script
 fetchVillager();

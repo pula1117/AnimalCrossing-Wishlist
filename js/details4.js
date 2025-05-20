@@ -3,7 +3,7 @@ const villagerName = 'Julia';
 
 async function fetchVillager() {
   try {
-    const response = await fetch(`https://api.nookipedia.com/villagers/${encodeURIComponent(Julia)}`, {
+    const response = await fetch(`https://api.nookipedia.com/villagers/${encodeURIComponent(villagerName)}`, {
       headers: {
         'X-API-KEY': apiKey,
         'Accept': 'application/json'

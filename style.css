@@ -118,7 +118,6 @@ main::after {
   left: 0;
   width: 100%;
   height: 40vh; /* ajusta esto según cuánto quieres que difumine */
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #FCF6D6 100%);
   pointer-events: none;
   z-index: 1;
 }
@@ -448,4 +447,26 @@ model-viewer {
     justify-content:center;
     align-items: center;
     gap: 2px;
+}
+
+footer {
+  font-family: nintendoP;
+}
+
+footer a:hover {
+  color: #FBFEB2 !important;
+}
+
+.social-icon {
+  color: white;
+  text-decoration: none !important;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #FBFEB2 !important;
+}
+
+.custom-footer {
+  background-color: #d8c2a7;;
 }

@@ -329,6 +329,86 @@ h1{
   }
 }
 
+/* Quitar fondo anterior del contenedor del formulario */
+.bg-form {
+  background-color: transparent !important;
+  padding: 2rem;
+}
+
+/* Estilos del formulario */
+.form-custom {
+  max-width: 550px;
+  width: 100%;
+  background-color: #ffffff;
+  font-family: "nintendoP", sans-serif;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #98856E; /* Color general del texto */
+}
+
+/* Fondo semitransparente verde */
+.translucent-bg {
+  background-color: rgba(116, 224, 170, 0.7);
+}
+
+/* Título REGISTER (NO CAMBIAR COLOR) */
+.register-title {
+  font-size: 3rem;
+  color: #E89D93;
+  font-family: "nintendoP", sans-serif;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Inputs personalizados */
+.custom-input {
+  background-color: #74E0AA !important;
+  border: none !important;
+  color: #98856E;
+  font-family: "nintendoP", sans-serif;
+}
+
+/* Placeholder en color marrón */
+.custom-input::placeholder {
+  color: #98856E;
+  opacity: 1; /* Para asegurar que se vea bien */
+}
+
+/* Contenedor del botón con fondo amarillo */
+.btn-container {
+  background-color: #FBFEB2;
+  padding: 0.75rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Botón personalizado */
+.custom-btn {
+  background-color: #74E0AA;
+  color: #98856E;
+  font-weight: bold;
+  font-family: "nintendoP", sans-serif;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #5bc499;
+  color: #98856E;
+}
+
+/* Aplicar fuente y color a otros elementos */
+form,
+.form-label,
+.form-check-label,
+.input-group-text,
+.invalid-feedback,
+.valid-feedback {
+  font-family: "nintendoP", sans-serif !important;
+  color: #98856E;
+}
+
 .details {
   display: flex;
   justify-content: center;  /* centra horizontalmente */
@@ -368,37 +448,4 @@ model-viewer {
     justify-content:center;
     align-items: center;
     gap: 2px;
-}
-
-/* Fondo y centrado del contenedor del formulario */
-.bg-form {
-  background-color: #fcf6d6;
-  padding: 2rem;
-}
-
-/* Estilos del formulario */
-.form-custom {
-  max-width: 400px;
-  width: 100%;
-  background-color: #ffffff;
-  font-family: nintendoP;
-}
-
-/* Mejora visual general */
-.form-label,
-.form-check-label,
-input,
-button {
-  font-family: nintendoP;
-}
-
-/* Botón más atractivo */
-.btn-primary {
-  background-color: #74e0aa;
-  border: none;
-  font-weight: bold;
-}
-
-.btn-primary:hover {
-  background-color: #5bc499;
 }

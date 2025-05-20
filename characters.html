@@ -18,21 +18,28 @@
     <div class="imgBg">
         <!-- HEADER -->
         <header class="bg-success sticky-top">
-            <div class="container-fluid d-flex align-items-center justify-content-between py-3">
-                <!-- Logo a la izquierda -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+                <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
                     <img class="imagen-logo" src="media/img/animal_crossing_leaf_logo.png" alt="Logo" />
                 </a>
-
-                <!-- Botones centrados -->
-                <div class="d-flex justify-content-center flex-grow-1 gap-3">
-                    <a href="characters.html" class="btn nav-btn">CHARACTERS</a>
-                    <a href="details.html" class="btn nav-btn">DETAILS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav gap-3">
+                    <li class="nav-item">
+                        <a href="characters.html" class="btn nav-btn nav-link">CHARACTERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="details.html" class="btn nav-btn nav-link">DETAILS</a>
+                    </li>
+                    </ul>
                 </div>
-
-                <!-- Espacio vacío para equilibrio visual -->
                 <div style="width: 50px;"></div>
-            </div>
+                </div>
+            </nav>
         </header>
 
         <!-- TÍTULO -->
@@ -40,14 +47,23 @@
 
 
         <!-- BOTONES DE FILTRO ALINEADOS A LA IZQUIERDA -->
-        <div class="container my-4">
-            <div class="d-flex justify-content-start">
-                <div class="btn-group" role="group" aria-label="Species selector">
-                    <button id="btnCats" type="button" class="btn btn-tab">Cats</button>
-                    <button id="btnEagles" type="button" class="btn btn-tab">Eagles</button>
-                    <button id="btnElephants" type="button" class="btn btn-tab">Elephants</button>
-                    <button id="btnOctopus" type="button" class="btn btn-tab">Octopus</button>
+        <div class="container px-0" style="max-width: 90%;">
+            <div class="d-flex justify-content-start" style="margin-bottom: -10px;">
+                <div class="tab-buttons d-flex flex-row align-items-end">
+                    <button id="btnCats" type="button" class="btn btn-tab">
+                        <img src="media/img/heads/bob_head.png" alt="Cat Icon" class="icon-img" />
+                    </button>
+                    <button id="btnEagles" type="button" class="btn btn-tab">
+                        <img src="media/img/heads/apollo_head.png" alt="Eagle Icon" class="icon-img" />
+                    </button>
+                    <button id="btnElephants" type="button" class="btn btn-tab">
+                        <img src="media/img/heads/chai_head.png" alt="Elephant Icon" class="icon-img" />
+                    </button>
+                    <button id="btnSquirrel" type="button" class="btn btn-tab">
+                        <img src="media/img/heads/marshall head.png" alt="Squirrel Icon" class="icon-img" />
+                    </button>
                 </div>
+
             </div>
         </div>
 
@@ -68,8 +84,8 @@
               <div class="row justify-content-center" id="elephantRow"></div>
           </div>
 
-          <div id="villagerOctopusContainer" style="display: none;">
-              <div class="row justify-content-center" id="octopusRow"></div>
+          <div id="villagerSquirrelContainer" style="display: none;">
+              <div class="row justify-content-center" id="squirrelRow"></div>
           </div>
         </div>
 

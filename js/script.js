@@ -5,7 +5,7 @@ $(document).ready(function () {
         cat: "#villagerCatContainer",
         eagle: "#villagerEagleContainer",
         elephant: "#villagerElephantContainer",
-        octopus: "#villagerOctopusContainer"
+        squirrel: "#villagerSquirrelContainer"
     };
 
     function hideAll() {
@@ -27,65 +27,59 @@ $(document).ready(function () {
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
         return response.json();
     })
-    .then(data => {
-        $("#loading").hide();
+   .then(data => {
+    $("#loading").hide();
 
-        data.forEach(villager => {
-            const speciesKey = villager.species.toLowerCase();
+    data.forEach(villager => {
+        const speciesKey = villager.species.toLowerCase();
 
-            if (speciesContainers[speciesKey]) {
-                console.log(villager); // Muestra toda la info del personaje
-
-                const card = `
-                    <div class="col-6 col-md-3 col-lg-3 mb-4 px-2">
-
-                        <a href="https://nookipedia.com/wiki/${encodeURIComponent(villager.name)}" target="_blank" class="card-link-wrapper text-decoration-none w-100">
-                            <div class="card shadow-sm border-0" style="border-radius: 1rem; overflow: hidden;">
-                                <img src="${villager.image_url}" class="card-img-top" alt="${villager.name}" style="height: 480px; object-fit: cover;">
-                                <div class="card-body text-dark p-2 d-flex justify-content-center align-items-center" style="height: auto; background: white;">
-                                    <h5 class="card-title m-0">${villager.name}</h5>
-                                </div>
+        if (speciesContainers[speciesKey]) {
+            const card = `
+                <div class="col-6 col-md-3 col-lg-3 mb-4 px-2">
+                    <a href="https://nookipedia.com/wiki/${encodeURIComponent(villager.name)}" target="_blank" class="card-link-wrapper text-decoration-none w-100">
+                        <div class="card shadow-sm border-0" style="border-radius: 1rem; overflow: hidden;">
+                            <img src="${villager.image_url}" class="card-img-top" alt="${villager.name}">
+                            <div class="card-body text-dark p-2 d-flex justify-content-center align-items-center">
+                                <h5 class="card-title m-0">${villager.name}</h5>
                             </div>
-                        </a>
-                    </div>
-                `;
-
-
-
-                $(`#${speciesKey}Row`).append(card);
-            }
-        });
-
-        // Función para marcar botón activo
-        function setActiveTab(buttonId) {
-            $(".btn-tab").removeClass("active-tab");
-            $(`#${buttonId}`).addClass("active-tab");
+                        </div>
+                    </a>
+                </div>
+            `;
+            $(`#${speciesKey}Row`).append(card); // Corrección aquí
         }
+    });
 
-        // Botones con efecto de pestaña
-        $("#btnCats").click(function () {
-            hideAll();
-            $(speciesContainers["cat"]).show();
-            setActiveTab("btnCats");
-        });
+    // Botón activo
+    function setActiveTab(buttonId) {
+        $(".btn-tab").removeClass("active-tab");
+        $(`#${buttonId}`).addClass("active-tab");
+    }
 
-        $("#btnEagles").click(function () {
-            hideAll();
-            $(speciesContainers["eagle"]).show();
-            setActiveTab("btnEagles");
-        });
+    // Asignar handlers
+    $("#btnCats").click(function () {
+        hideAll();
+        $(speciesContainers["cat"]).show();
+        setActiveTab("btnCats");
+    });
 
-        $("#btnElephants").click(function () {
-            hideAll();
-            $(speciesContainers["elephant"]).show();
-            setActiveTab("btnElephants");
-        });
+    $("#btnEagles").click(function () {
+        hideAll();
+        $(speciesContainers["eagle"]).show();
+        setActiveTab("btnEagles");
+    });
 
-        $("#btnOctopus").click(function () {
-            hideAll();
-            $(speciesContainers["octopus"]).show();
-            setActiveTab("btnOctopus");
-        });
+    $("#btnElephants").click(function () {
+        hideAll();
+        $(speciesContainers["elephant"]).show();
+        setActiveTab("btnElephants");
+    });
+
+    $("#btnSquirrel").click(function () {
+        hideAll();
+        $(speciesContainers["squirrel"]).show();
+        setActiveTab("btnSquirrel");
+    });
 
         // Mostrar inicialmente los gatos y marcar el botón
         $(speciesContainers["cat"]).show();

@@ -88,9 +88,10 @@ img {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 100vh;
+  height: 75vh;
   overflow: hidden;
   padding-top: 2%;
+  padding-bottom: 1%;
 }
 
 .imageninicio img {
@@ -120,6 +121,192 @@ main::after {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #FCF6D6 100%);
   pointer-events: none;
   z-index: 1;
+}
+
+.wishlist-title {
+  font-family: nintendoP;
+  color: #74E0AA;
+  margin-top: 0; /* elimina margen superior */
+}
+
+.info {
+  font-family: nintendoP;
+  color: #d69188;
+
+  padding: 5px;
+
+    
+    margin-bottom: 100px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    gap: 2px;
+
+}
+
+.info1{
+  font-family: nintendoP;
+  color: #d69188;
+  padding: 5px;
+
+    
+    margin-bottom: 100px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    gap: 2px;
+}
+
+.videoinfo{
+  height: 80%;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-bg{
+  background-color: #74e0aa ;
+}
+
+
+/* Contenedor interior con fondo y bordes redondeados */
+.about-container {
+  background-color: #d8c2a7;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.about-title {
+  color: #fdf6c9;
+  font-weight: bold;
+  font-family: nintendoP;
+}
+
+/* Imagen de personaje */
+.character-img {
+  border-radius: 0.75rem;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* Nombre del personaje */
+.character-name {
+  color: #fdf6c9;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: nintendoP;
+}
+
+/* Descripción inferior */
+.about-description {
+  font-weight: 500;
+  color: rgba(152, 133, 110, 1);
+  max-width: 800px;
+  margin: 0 auto;
+
+}
+/* characters page */
+
+
+.imgBg{
+  background: url('media\img\fondo personajes y details.png') no-repeat center center;
+}
+
+
+.btn-tab {
+  background-color: #FBFEB2;
+  color: #E89D93;
+  font-family: nintendoP;
+  border: 2px solid #E89D93;
+  border-bottom: none;
+  /* border-radius: 1rem 1rem 0 0; */
+  padding: 10px 20px;
+  /* margin: 0 5px; */
+  transition: all 0.3s ease;
+}
+
+.btn-tab:hover {
+  background-color: #f1f4a1;
+  color: #d47a70;
+}
+
+.btn-tab.active-tab {
+  background-color: #74e0aa;
+  color: black;
+  /* border-bottom: 3px solid white; */
+  border-bottom: none;
+  font-weight: 500;
+}
+
+.translucent-green-bg {
+    background-color: rgba(144, 238, 144, 0.6);
+    border-radius: 80px;
+    padding: 40px;
+    max-width: 90%;
+    margin: 0 auto; /* centra horizontalmente */
+}
+
+  
+  
+  
+.card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  max-width: 250px; /* nuevo: ancho máximo menor */
+  margin: 0 auto; /* centrar horizontalmente dentro de su columna */
+}
+
+.card-body {
+  padding: 0.5rem;
+  text-align: center;
+  font-family: nintendoP;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0 0 1rem 1rem;
+  background-color: white;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-link-wrapper:hover .card {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+} 
+
+.card-img-top {
+  height: 350px !important; /* más baja que 480px */
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+
+.row.justify-content-center {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+@media (min-width: 992px) {
+  .col-lg-2-4 {
+    flex: 0 0 auto;
+    width: 20%;
+  }
 }
 
 .details {

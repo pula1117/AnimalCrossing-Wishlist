@@ -227,39 +227,44 @@ main::after {
 
 
 .btn-tab {
-  background-color: rgba(251, 254, 178, 0.8); /* amarillo con transparencia */
+  background-color: #FBFEB2;
   color: #E89D93;
   font-family: nintendoP;
-  border: 2px solid #74e0aa; /* borde verde */
-  border-bottom: none; /* efecto de pestaña levantada */
-  border-radius: 1rem 1rem 0 0;
-  /* padding: 10px 20px; */
-  margin-right: -1px; /* elimina doble borde entre pestañas */
+  border: 2px solid #E89D93;
+  border-bottom: none;
+  /* border-radius: 1rem 1rem 0 0; */
+  padding: 10px 20px;
+  /* margin: 0 5px; */
   transition: all 0.3s ease;
-  position: relative;
-  z-index: 1;
 }
 
-/* .btn-tab:hover {
-  background-color: rgba(241, 244, 161, 0.5);
+.btn-tab:hover {
+  background-color: #f1f4a1;
   color: #d47a70;
-} */
+}
 
 .btn-tab.active-tab {
   background-color: #74e0aa;
   color: black;
-  z-index: 2; /* para que se vea encima del resto */
+  /* border-bottom: 3px solid white; */
+  border-bottom: none;
+  font-weight: 500;
+}
+
+.my-4 {
+    margin-top: 0rem !important;
+    margin-bottom: 1.5rem !important;
 }
 
 .translucent-green-bg {
-  background-color: rgba(144, 238, 144, 0.6);
-  border-radius: 80px;
-  padding: 0 40px 40px 40px; /* quitamos padding-top */
-  max-width: 90%;
-  margin: 0 auto;
+    background-color: rgba(144, 238, 144, 0.6);
+    border-radius: 80px;
+    padding: 40px;
+    max-width: 90%;
+    margin: 0 auto; /* centra horizontalmente */
 }
 
-  
+
   
   
 .card {

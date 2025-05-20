@@ -27,59 +27,64 @@ $(document).ready(function () {
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
         return response.json();
     })
-   .then(data => {
-    $("#loading").hide();
+    .then(data => {
+        $("#loading").hide();
 
-    data.forEach(villager => {
-        const speciesKey = villager.species.toLowerCase();
+        data.forEach(villager => {
+            const speciesKey = villager.species.toLowerCase();
 
-        if (speciesContainers[speciesKey]) {
-            const card = `
-                <div class="col-6 col-md-3 col-lg-3 mb-4 px-2">
-                    <a href="https://nookipedia.com/wiki/${encodeURIComponent(villager.name)}" target="_blank" class="card-link-wrapper text-decoration-none w-100">
-                        <div class="card shadow-sm border-0" style="border-radius: 1rem; overflow: hidden;">
-                            <img src="${villager.image_url}" class="card-img-top" alt="${villager.name}">
-                            <div class="card-body text-dark p-2 d-flex justify-content-center align-items-center">
-                                <h5 class="card-title m-0">${villager.name}</h5>
+            if (speciesContainers[speciesKey]) {
+                // Si el personaje es Apollo, cambiar la URL al archivo local
+                const url = villager.name === "Apollo" 
+                    ? "details.html" 
+                    : `https://nookipedia.com/wiki/${encodeURIComponent(villager.name)}`;
+
+                const card = `
+                    <div class="col-6 col-md-3 col-lg-3 mb-4 px-2">
+                        <a href="${url}" target="_blank" class="card-link-wrapper text-decoration-none w-100">
+                            <div class="card shadow-sm border-0" style="border-radius: 1rem; overflow: hidden;">
+                                <img src="${villager.image_url}" class="card-img-top" alt="${villager.name}">
+                                <div class="card-body text-dark p-2 d-flex justify-content-center align-items-center">
+                                    <h5 class="card-title m-0">${villager.name}</h5>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-            `;
-            $(`#${speciesKey}Row`).append(card); // Corrección aquí
+                        </a>
+                    </div>
+                `;
+                $(`#${speciesKey}Row`).append(card);
+            }
+        });
+
+        // Botón activo
+        function setActiveTab(buttonId) {
+            $(".btn-tab").removeClass("active-tab");
+            $(`#${buttonId}`).addClass("active-tab");
         }
-    });
 
-    // Botón activo
-    function setActiveTab(buttonId) {
-        $(".btn-tab").removeClass("active-tab");
-        $(`#${buttonId}`).addClass("active-tab");
-    }
+        // Asignar handlers
+        $("#btnCats").click(function () {
+            hideAll();
+            $(speciesContainers["cat"]).show();
+            setActiveTab("btnCats");
+        });
 
-    // Asignar handlers
-    $("#btnCats").click(function () {
-        hideAll();
-        $(speciesContainers["cat"]).show();
-        setActiveTab("btnCats");
-    });
+        $("#btnEagles").click(function () {
+            hideAll();
+            $(speciesContainers["eagle"]).show();
+            setActiveTab("btnEagles");
+        });
 
-    $("#btnEagles").click(function () {
-        hideAll();
-        $(speciesContainers["eagle"]).show();
-        setActiveTab("btnEagles");
-    });
+        $("#btnElephants").click(function () {
+            hideAll();
+            $(speciesContainers["elephant"]).show();
+            setActiveTab("btnElephants");
+        });
 
-    $("#btnElephants").click(function () {
-        hideAll();
-        $(speciesContainers["elephant"]).show();
-        setActiveTab("btnElephants");
-    });
-
-    $("#btnSquirrel").click(function () {
-        hideAll();
-        $(speciesContainers["squirrel"]).show();
-        setActiveTab("btnSquirrel");
-    });
+        $("#btnSquirrel").click(function () {
+            hideAll();
+            $(speciesContainers["squirrel"]).show();
+            setActiveTab("btnSquirrel");
+        });
 
         // Mostrar inicialmente los gatos y marcar el botón
         $(speciesContainers["cat"]).show();

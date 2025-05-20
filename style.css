@@ -88,9 +88,10 @@ img {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 100vh;
+  height: 75vh;
   overflow: hidden;
   padding-top: 2%;
+  padding-bottom: 1%;
 }
 
 .imageninicio img {
@@ -122,8 +123,99 @@ main::after {
   z-index: 1;
 }
 
+.wishlist-title {
+  font-family: nintendoP;
+  color: #74E0AA;
+  margin-top: 0; /* elimina margen superior */
+}
+
+.info {
+  font-family: nintendoP;
+  color: #d69188;
+
+  padding: 5px;
+
+    
+    margin-bottom: 100px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    gap: 2px;
+
+}
+
+.info1{
+  font-family: nintendoP;
+  color: #d69188;
+  padding: 5px;
+
+    
+    margin-bottom: 100px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    gap: 2px;
+}
+
+.videoinfo{
+  height: 80%;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-bg{
+  background-color: #74e0aa ;
+}
 
 
+/* Contenedor interior con fondo y bordes redondeados */
+.about-container {
+  background-color: #d8c2a7;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.about-title {
+  color: #fdf6c9;
+  font-weight: bold;
+  font-family: nintendoP;
+}
+
+/* Imagen de personaje */
+.character-img {
+  border-radius: 0.75rem;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* Nombre del personaje */
+.character-name {
+  color: #fdf6c9;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: nintendoP;
+}
+
+/* Descripción inferior */
+.about-description {
+  font-weight: 500;
+  color: rgba(152, 133, 110, 1);
+  max-width: 800px;
+  margin: 0 auto;
+
+}
 /* characters page */
 
 

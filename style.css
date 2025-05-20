@@ -308,3 +308,36 @@ main::after {
     width: 20%;
   }
 }
+
+/* Fondo y centrado del contenedor del formulario */
+.bg-form {
+  background-color: #fcf6d6;
+  padding: 2rem;
+}
+
+/* Estilos del formulario */
+.form-custom {
+  max-width: 400px;
+  width: 100%;
+  background-color: #ffffff;
+  font-family: nintendoP;
+}
+
+/* Mejora visual general */
+.form-label,
+.form-check-label,
+input,
+button {
+  font-family: nintendoP;
+}
+
+/* Botón más atractivo */
+.btn-primary {
+  background-color: #74e0aa;
+  border: none;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #5bc499;
+}

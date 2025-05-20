@@ -311,6 +311,16 @@ h1{
   color:#f1f4a1;
 }
 
+.box-title{
+  background-color: #74E0AA;
+  margin-left: 45rem;
+  margin-right: 45rem;
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-radius: 1rem;
+  color: #FBFEB2;
+}
 
 @media (min-width: 992px) {
   .col-lg-2-4 {

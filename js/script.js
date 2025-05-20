@@ -4,7 +4,7 @@ $(document).ready(function () {
     const speciesContainers = {
         cat: "#villagerCatContainer",
         eagle: "#villagerEagleContainer",
-        elephant: "#villagerElephantContainer",
+        ostrich: "#villagerOstrichContainer",
         squirrel: "#villagerSquirrelContainer"
     };
 
@@ -74,10 +74,10 @@ $(document).ready(function () {
             setActiveTab("btnEagles");
         });
 
-        $("#btnElephants").click(function () {
+        $("#btnOstrich").click(function () {
             hideAll();
-            $(speciesContainers["elephant"]).show();
-            setActiveTab("btnElephants");
+            $(speciesContainers["ostrich"]).show();
+            setActiveTab("btnOstrich");
         });
 
         $("#btnSquirrel").click(function () {

@@ -5,7 +5,7 @@ $(document).ready(function () {
         cat: "#villagerCatContainer",
         eagle: "#villagerEagleContainer",
         elephant: "#villagerElephantContainer",
-        octopus: "#villagerOctopusContainer"
+        squirrel: "#villagerSquirrelContainer"
     };
 
     function hideAll() {
@@ -81,10 +81,10 @@ $(document).ready(function () {
             setActiveTab("btnElephants");
         });
 
-        $("#btnOctopus").click(function () {
+        $("#btnSquirrel").click(function () {
             hideAll();
-            $(speciesContainers["octopus"]).show();
-            setActiveTab("btnOctopus");
+            $(speciesContainers["squirrel"]).show();
+            setActiveTab("btnSquirrel");
         });
 
         // Mostrar inicialmente los gatos y marcar el botón

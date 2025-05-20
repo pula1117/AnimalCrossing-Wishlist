@@ -1,4 +1,4 @@
-const apiKey = '2cb526da-fa3e-4a24-b550-6aad92eb0c02'; // Pon aquí tu API key real
+const apiKey = '2cb526da-fa3e-4a24-b550-6aad92eb0c02'; 
 const villagerName = 'Apollo';
 
 async function fetchVillager() {

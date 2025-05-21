@@ -221,7 +221,7 @@ main::after {
 
 /* characters page */
 .imgBg {
-	background: url("media/img/fondo personajes y details.png") no-repeat center center;
+	background: url("media/img/fondo\ characters\ 2.jpg") no-repeat center center;
 	background-size: cover;
 	background-attachment: fixed;
 }

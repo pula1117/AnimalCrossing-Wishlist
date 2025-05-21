@@ -233,6 +233,7 @@ main::after {
 	border: 2px solid #E89D93;
 	padding: 10px 20px;
 	transition: all 0.3s ease;
+	margin-top: 10%;
 }
 
 .btn-tab:hover {

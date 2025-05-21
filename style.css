@@ -1,401 +1,414 @@
 /* Tipografías personalizadas */
 @font-face {
-  font-family: "FinkHeavy";
-  src: url(media/fonts/FinkHeavy.ttf);
+	font-family: "FinkHeavy";
+	src: url(media/fonts/FinkHeavy.ttf);
 }
 
 @font-face {
-  font-family: "nintendoP";
-  src: url(media/fonts/nintendoP_Humming-E_002pr.otf);
+	font-family: "nintendoP";
+	src: url(media/fonts/nintendoP_Humming-E_002pr.otf);
 }
+
 
 /* Reglas globales */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: FinkHeavy, nintendoP;
+	margin: 0;
+	padding: 0;
+	font-family: FinkHeavy, nintendoP;
 }
 
 img {
-  width: 100%;
-  height: auto;
-  vertical-align: middle;
+	width: 100%;
+	height: auto;
+	vertical-align: middle;
 }
+
 
 /* HEADER - Navbar */
 .container-fluid,
 .navbar-custom {
-  background-color: #74e0aa;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  gap: 20px;
-  font-family: nintendoP;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+	background-color: #74e0aa;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	gap: 20px;
+	font-family: nintendoP;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
 }
+
 
 /* Logo */
 .navbar-brand {
-  width: 50px;
-  height: 50px;
-  margin-right: auto;
+	width: 50px;
+	height: 50px;
+	margin-right: auto;
 }
 
 .navbar-brand .imagen-logo {
-  width: 50px;
-  height: 50px;
-  padding: 10%;
-  display: flex;
-  align-items: center;
-  transition: transform 0.3s;
+	width: 50px;
+	height: 50px;
+	padding: 10%;
+	display: flex;
+	align-items: center;
+	transition: transform 0.3s;
 }
 
 .navbar-brand .imagen-logo:hover {
-  transform: scale(1.1);
+	transform: scale(1.1);
 }
+
 
 /* Navegación centrada */
 .nav-links-centered {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
 }
 
 .nav-btn {
-  background-color: #FBFEB2 !important; 
-  color: #E89D93 !important;
-  border: none !important;
-  font-family: nintendoP;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 10px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  text-decoration: none;
+	background-color: #FBFEB2 !important;
+	color: #E89D93 !important;
+	border: none !important;
+	font-family: nintendoP;
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 10px;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	text-decoration: none;
 }
 
 .nav-btn:hover {
-  background-color: #d7da98 !important; 
-  color: #d69188 !important;  
+	background-color: #d7da98 !important;
+	color: #d69188 !important;
 }
+
 
 /* Imagen de inicio */
 .imageninicio {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 75vh;
-  overflow: hidden;
-  padding-top: 2%;
-  padding-bottom: 1%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	height: 75vh;
+	overflow: hidden;
+	padding-top: 2%;
+	padding-bottom: 1%;
 }
 
 .imageninicio img {
-  max-width: 70vw;
-  max-height: 70vh;
-  width: auto;
-  height: auto;
+	max-width: 70vw;
+	max-height: 70vh;
+	width: auto;
+	height: auto;
 }
 
 main {
-  position: relative;
-  background: url('media/img/fondo main.jpg') no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
-  min-height: 100vh;
+	position: relative;
+	background: url('media/img/fondo main.jpg') no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 100vh;
 }
 
-/* Esto hay q mirar porq no scrollea */
 
+/* Esto hay q mirar porq no scrollea */
 main::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40vh; /* ajusta esto según cuánto quieres que difumine */
-  pointer-events: none;
-  z-index: 1;
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 40vh;
+	/* ajusta esto según cuánto quieres que difumine */
+	pointer-events: none;
+	z-index: 1;
 }
 
 .wishlist-title {
-  font-family: nintendoP;
-  color: #74E0AA;
-  margin-top: 0; /* elimina margen superior */
+	font-family: nintendoP;
+	color: #74E0AA;
+	margin-top: 0;
+	/* elimina margen superior */
 }
 
 .info {
-  font-family: nintendoP;
-  color: #d69188;
-
-  padding: 5px;
-
-    
-    margin-bottom: 100px;
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content:center;
-    align-items: center;
-    gap: 2px;
-
+	font-family: nintendoP;
+	color: #d69188;
+	padding: 5px;
+	margin-bottom: 100px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 2px;
 }
 
-.info1{
-  font-family: nintendoP;
-  color: #d69188;
-  padding: 5px;
-
-    
-    margin-bottom: 100px;
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content:center;
-    align-items: center;
-    gap: 2px;
+.info1 {
+	font-family: nintendoP;
+	color: #d69188;
+	padding: 5px;
+	margin-bottom: 100px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 2px;
 }
 
-.videoinfo{
-  height: 80%;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.videoinfo {
+	height: 80%;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.custom-bg{
-  background-color: #74e0aa ;
+.custom-bg {
+	background-color: #74e0aa;
 }
 
 
 /* Contenedor interior con fondo y bordes redondeados */
 .about-container {
-  background-color: #d8c2a7;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	background-color: #d8c2a7;
+	border-radius: 1rem;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Título */
 .about-title {
-  color: #fdf6c9;
-  font-weight: bold;
-  font-family: nintendoP;
+	color: #fdf6c9;
+	font-weight: bold;
+	font-family: nintendoP;
 }
+
 
 /* Imagen de personaje */
 .character-img {
-  border-radius: 0.75rem;
-  max-height: 400px;
-  object-fit: cover;
+	border-radius: 0.75rem;
+	max-height: 400px;
+	object-fit: cover;
 }
+
 
 /* Nombre del personaje */
 .character-name {
-  color: #fdf6c9;
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-family: nintendoP;
+	color: #fdf6c9;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-family: nintendoP;
 }
+
 
 /* Descripción inferior */
 .about-description {
-  font-weight: 500;
-  color: rgba(152, 133, 110, 1);
-  max-width: 800px;
-  margin: 0 auto;
-
+	font-weight: 500;
+	color: rgba(152, 133, 110, 1);
+	max-width: 800px;
+	margin: 0 auto;
 }
+
+
 /* characters page */
-
-
 .imgBg {
-  background: url("media/img/fondo personajes y details.png") no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
+	background: url("media/img/fondo personajes y details.png") no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed;
 }
-
 
 .btn-tab {
-  background-color: #FBFEB2;
-  color: #E89D93;
-  font-family: nintendoP;
-  border: 2px solid #E89D93;
-  padding: 10px 20px;
-  transition: all 0.3s ease;
+	background-color: #FBFEB2;
+	color: #E89D93;
+	font-family: nintendoP;
+	border: 2px solid #E89D93;
+	padding: 10px 20px;
+	transition: all 0.3s ease;
 }
 
 .btn-tab:hover {
-  background-color: #f1f4a1;
-  color: #d47a70;
+	background-color: #f1f4a1;
+	color: #d47a70;
 }
 
 .btn-tab.active-tab {
-  background-color: #74e0aa;
-  color: black;
-  
-  font-weight: 500;
+	background-color: #74e0aa;
+	color: black;
+	font-weight: 500;
 }
 
 .my-4 {
-    margin-top: 0rem !important;
-    margin-bottom: 1.5rem !important;
+	margin-top: 0rem !important;
+	margin-bottom: 1.5rem !important;
 }
 
 .translucent-green-bg {
-    background-color: rgba(144, 238, 144, 0.6);
-    border-radius: 80px;
-    padding: 40px;
-    max-width: 90%;
-    margin: 0 auto; /* centra horizontalmente */
+	background-color: rgba(144, 238, 144, 0.6);
+	border-radius: 80px;
+	padding: 40px;
+	max-width: 90%;
+	margin: 0 auto;
+	/* centra horizontalmente */
 }
-  
-  
+
 .card {
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  max-width: 250px; /* nuevo: ancho máximo menor */
-  margin: 0 auto; /* centrar horizontalmente dentro de su columna */
+	border: none;
+	border-radius: 20px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+	max-width: 250px;
+	/* nuevo: ancho máximo menor */
+	margin: 0 auto;
+	/* centrar horizontalmente dentro de su columna */
 }
 
 .card-body {
-  padding: 0.5rem;
-  text-align: center;
-  font-family: nintendoP;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 0 0 1rem 1rem;
-  background-color: white;
+	padding: 0.5rem;
+	text-align: center;
+	font-family: nintendoP;
+	font-size: 1rem;
+	font-weight: 600;
+	border-radius: 0 0 1rem 1rem;
+	background-color: white;
 }
+
 .card:hover {
-  transform: scale(1.03);
+	transform: scale(1.03);
 }
 
 .card-link-wrapper:hover .card {
-  transform: scale(1.02);
-  transition: transform 0.3s ease;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-} 
+	transform: scale(1.02);
+	transition: transform 0.3s ease;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+}
 
 .card-img-top {
-  height: 350px !important; /* más baja que 480px */
-  object-fit: cover;
-  border-radius: 1rem 1rem 0 0;
+	height: 350px !important;
+	/* más baja que 480px */
+	object-fit: cover;
+	border-radius: 1rem 1rem 0 0;
 }
-
 
 .row.justify-content-center {
-  margin-left: 0;
-  margin-right: 0;
+	margin-left: 0;
+	margin-right: 0;
 }
 
-
-h1{
-  font-family: nintendoP;
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 20px;
-  color:#f1f4a1;
+h1 {
+	font-family: nintendoP;
+	font-size: 2.5rem;
+	text-align: center;
+	margin-bottom: 20px;
+	color: #f1f4a1;
 }
 
-.box-title{
-  background-color: #74E0AA;
-  margin-left: 45rem;
-  margin-right: 45rem;
-  margin-top: 4rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-radius: 1rem;
-  color: #FBFEB2;
+.box-title {
+	background-color: #74E0AA;
+	margin-left: 45rem;
+	margin-right: 45rem;
+	margin-top: 4rem;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	border-radius: 1rem;
+	color: #FBFEB2;
 }
 
 @media (min-width: 992px) {
-  .col-lg-2-4 {
-    flex: 0 0 auto;
-    width: 20%;
-  }
+	.col-lg-2-4 {
+		flex: 0 0 auto;
+		width: 20%;
+	}
 }
+
 
 /* Quitar fondo anterior del contenedor del formulario */
 .bg-form {
-  background-color: transparent !important;
-  padding: 2rem;
+	background-color: transparent !important;
+	padding: 2rem;
 }
+
 
 /* Estilos del formulario */
 .form-custom {
-  max-width: 550px;
-  width: 100%;
-  background-color: #ffffff;
-  font-family: "nintendoP", sans-serif;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  color: #98856E; /* Color general del texto */
+	max-width: 550px;
+	width: 100%;
+	background-color: #ffffff;
+	font-family: "nintendoP", sans-serif;
+	padding: 2rem;
+	border-radius: 1rem;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	color: #98856E;
+	/* Color general del texto */
 }
+
 
 /* Fondo semitransparente verde */
 .translucent-bg {
-  background-color: rgba(116, 224, 170, 0.7);
+	background-color: rgba(116, 224, 170, 0.7);
 }
+
 
 /* Título REGISTER (NO CAMBIAR COLOR) */
 .register-title {
-  font-size: 3rem;
-  color: #E89D93;
-  font-family: "nintendoP", sans-serif;
-  text-align: center;
-  margin-bottom: 1.5rem;
+	font-size: 3rem;
+	color: #E89D93;
+	font-family: "nintendoP", sans-serif;
+	text-align: center;
+	margin-bottom: 1.5rem;
 }
+
 
 /* Inputs personalizados */
 .custom-input {
-  background-color: #74E0AA !important;
-  border: none !important;
-  color: #98856E;
-  font-family: "nintendoP", sans-serif;
+	background-color: #74E0AA !important;
+	border: none !important;
+	color: #98856E;
+	font-family: "nintendoP", sans-serif;
 }
+
 
 /* Placeholder en color marrón */
 .custom-input::placeholder {
-  color: #98856E;
-  opacity: 1; /* Para asegurar que se vea bien */
+	color: #98856E;
+	opacity: 1;
+	/* Para asegurar que se vea bien */
 }
+
 
 /* Contenedor del botón con fondo amarillo */
 .btn-container {
-  background-color: #FBFEB2;
-  padding: 0.75rem;
-  border-radius: 10px;
-  text-align: center;
+	background-color: #FBFEB2;
+	padding: 0.75rem;
+	border-radius: 10px;
+	text-align: center;
 }
+
 
 /* Botón personalizado */
 .custom-btn {
-  background-color: #74E0AA;
-  color: #98856E;
-  font-weight: bold;
-  font-family: "nintendoP", sans-serif;
-  border: none;
-  transition: background-color 0.3s ease;
+	background-color: #74E0AA;
+	color: #98856E;
+	font-weight: bold;
+	font-family: "nintendoP", sans-serif;
+	border: none;
+	transition: background-color 0.3s ease;
 }
 
 .custom-btn:hover {
-  background-color: #5bc499;
-  color: #98856E;
+	background-color: #5bc499;
+	color: #98856E;
 }
+
 
 /* Aplicar fuente y color a otros elementos */
 form,
@@ -404,69 +417,73 @@ form,
 .input-group-text,
 .invalid-feedback,
 .valid-feedback {
-  font-family: "nintendoP", sans-serif !important;
-  color: #98856E;
+	font-family: "nintendoP", sans-serif !important;
+	color: #98856E;
 }
 
 .details {
-  display: flex;
-  justify-content: center;  /* centra horizontalmente */
-  align-items: center;      /* centra verticalmente */
-  height: 10vh;            /* ocupa toda la pantalla */
+	display: flex;
+	justify-content: center;
+	/* centra horizontalmente */
+	align-items: center;
+	/* centra verticalmente */
+	height: 10vh;
+	/* ocupa toda la pantalla */
 }
 
 .detalles {
-  text-align: center;
-  font-family: nintendoP;
+	text-align: center;
+	font-family: nintendoP;
 }
 
 .character-card {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 15px;
+	padding: 20px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 model-viewer {
-  width: 100%;
-  height: 400px;
-  border-radius: 15px;
+	width: 100%;
+	height: 400px;
+	border-radius: 15px;
 }
 
 .character-info h3 {
-  font-family: nintendoP;
-  font-weight: bold;
+	font-family: nintendoP;
+	font-weight: bold;
 }
 
 .character-info p {
-  margin: 0;
-  font-family: nintendoP;
-  color: #d69188;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content:center;
-    align-items: center;
-    gap: 2px;
+	margin: 0;
+	font-family: nintendoP;
+	color: #d69188;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 2px;
 }
 
 footer {
-  font-family: nintendoP;
+	font-family: nintendoP;
 }
 
 footer a:hover {
-  color: #FBFEB2 !important;
+	color: #FBFEB2 !important;
 }
 
 .social-icon {
-  color: white;
-  text-decoration: none !important;
-  transition: color 0.3s ease;
+	color: white;
+	text-decoration: none !important;
+	transition: color 0.3s ease;
 }
 
 .social-icon:hover {
-  color: #FBFEB2 !important;
+	color: #FBFEB2 !important;
 }
 
 .custom-footer {
-  background-color: #d8c2a7;;
+	background-color: #d8c2a7;
+	;
 }
